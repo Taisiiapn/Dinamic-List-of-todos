@@ -1,0 +1,40 @@
+.mean-btn {
+  color: #000;
+  font-size: 50px;
+  text-transform: uppercase;
+  background-color: rgb(255, 208, 0);
+  border: 1px solid rgb(255, 208, 0);
+  border-radius: 15px;
+  margin: 300px auto;
+  padding: 10px 15px;
+  display: block;
+  cursor: pointer;
+}
+
+table {
+  margin: 50px auto;
+  width: 75%;
+}
+
+.table__title {
+  background-color: rgb(9, 9, 37);
+}
+
+.table__title-btn {
+  color: #fff;
+  background-color: rgb(66, 134, 223);
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: 1px solid rgb(66, 134, 223);
+  cursor: pointer;
+}
+
+h1, th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
