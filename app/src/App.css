@@ -3,7 +3,7 @@
   font-size: 50px;
   text-transform: uppercase;
   background-color: rgb(255, 208, 0);
-  border: 1px solid rgb(255, 208, 0);
+  border: none;
   border-radius: 15px;
   margin: 300px auto;
   padding: 10px 15px;
@@ -26,7 +26,7 @@ table {
   padding: 10px;
   margin: 10px auto;
   border-radius: 8px;
-  border: 1px solid rgb(66, 134, 223);
+  border: none;
   cursor: pointer;
 }
 

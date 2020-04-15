@@ -5,6 +5,9 @@ const ListOfTodos = ({ todos, sortBy }) => (
   <table>
     <thead>
       <tr className="table__title">
+        <th><button onClick={() => sortBy('id')} className="table__title-btn">
+          Todo ID
+        </button></th>
         <th><button onClick={() => sortBy('name')} className="table__title-btn">
           User name
         </button></th>
@@ -20,6 +23,7 @@ const ListOfTodos = ({ todos, sortBy }) => (
     <tbody>
       {todos.map(todo =>
         <tr key={todo.id}>
+          <td>{todo.id}</td>
           <td>{todo.user.name}</td>
           <td>{todo.title}</td>
           <td>{todo.completed ? 'completed' : 'uncompleted'}</td>

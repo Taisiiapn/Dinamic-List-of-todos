@@ -8,13 +8,15 @@ class App extends React.Component {
   state = {
     btnLoad: true,
     isLoading: false,
-    todos: []
+    todos: [],
+    copiedTodos: []
   }
 
   async componentDidMount() {
     const todos = await preparedTodos();
     this.setState({
-      todos: todos
+      todos,
+      copiedTodos: todos
     })
   }
 
@@ -32,7 +34,7 @@ class App extends React.Component {
 
   sortBy = (sortField) => {
     this.setState({
-      todos: this.state.todos.sort((todoA, todoB) => {
+      copiedTodos: [...this.state.todos].sort((todoA, todoB) => {
         switch (sortField) {
           case 'name': 
             return todoA.user.name.localeCompare(todoB.user.name);
@@ -48,7 +50,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { todos } = this.state;
+    const { copiedTodos } = this.state;
     return (
       <>
         {this.state.btnLoad ?
@@ -56,7 +58,7 @@ class App extends React.Component {
             {this.state.isLoading ? 'Loading...' : 'Load'}
           </button> :
 
-          <ListOfTodos todos={todos}
+          <ListOfTodos todos={copiedTodos}
                         sortBy={this.sortBy}
           />
         }
